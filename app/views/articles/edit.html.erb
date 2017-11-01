@@ -1,10 +1,11 @@
-<h1>Create an article</h1>
+<h1>Edit existing articles</h1>
 
 
 <% if @article.errors.any? %>
 <h2> The following errors prevented the article from getting created</h2>
+    <ul>
      <% @article.errors.full_messages.each do |msg| %>
-     <ul>
+     
     <li><%= msg %></li> 
     
 <% end %>
@@ -30,10 +31,10 @@
         <%= f.submit %>
     </p>
     
-    <p>
+     
         
-        <%= link_to 'Back to Index', articles_path %>
-    </p>
+        <%= link_to="Back to Index", articles_path %>
+    
 
 
 <% end %>
